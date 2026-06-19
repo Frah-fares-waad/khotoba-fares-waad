@@ -4,11 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>دعوة خطوبة حفيدة الأستاذ / الشحات أحمد إبراهيم النجار</title>
+<title>دعوة خطوبة حفيد الأستاذ / الشحات أحمد إبراهيم النجار</title>
 
-<meta name="description" content="يتشرف الأستاذ / الشحات أحمد إبراهيم النجار بدعوتكم لحضور حفل خطوبة حفيده">
+<!-- أوسمة الـ Meta للسوشيال ميديا والواتساب -->
+<meta name="description" content="يتشرف الأستاذ / الشحات أحمد إبراهيم النجار بدعوتكم لحضور حفل خطوبة حفيده مهندس / فارس و دكتورة / وعد">
 <meta property="og:title" content="دعوة خطوبة ملكية ✨">
-<meta property="og:description" content="نتشرف بحضوركم ومشاركتنا فرحتنا الكبرى">
+<meta property="og:description" content="نتشرف بحضوركم ومشاركتنا فرحتنا الكبرى - قاعة كمبنسك نيو جاردن">
 <meta property="og:type" content="website">
 
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -39,7 +40,7 @@ body{
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 11, 36, 0.85);
+    background: rgba(0, 11, 36, 0.9);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -157,7 +158,7 @@ body{
 
 /* تصميم الظرف الأزرق الملكي الفاخر */
 .envelope-wrapper{
-    position:relative;
+    position:absolute;
     width:340px;
     height:230px;
     background:#001f3f;
@@ -221,15 +222,15 @@ body{
     100% { transform:translateX(-50%) scale(1); }
 }
 
-/* كارت الدعوة الفخم الجديد كلياً */
+/* كارت الدعوة الملكي - تم زيادة الارتفاع وضبط الحشو ليناسب النصوص بدقة */
 .card{
     position:absolute;
     width:330px;
-    height:540px;
+    height:550px;
     background: radial-gradient(circle, #001f3f 0%, #001124 100%);
     border:3px solid #D4AF37;
     border-radius:24px;
-    padding:20px 15px;
+    padding:18px 14px;
     text-align:center;
     color:white;
     box-shadow:0 30px 70px rgba(0,0,0,.8), inset 0 0 40px rgba(212,175,55,0.15);
@@ -243,7 +244,7 @@ body{
     pointer-events: none;
 }
 
-/* حركة الفتح السحرية */
+/* حركة الفتح السحرية - تم تقليل نزول الجواب لمنع التداخل مع العداد نهائياً */
 .container.open .envelope-flap{
     transform:rotateX(180deg);
     z-index: 4;
@@ -256,21 +257,21 @@ body{
 
 .container.open .card{
     opacity:1;
-    transform:translateY(-110px) scale(1);
-    z-index: 20;
+    transform:translateY(-130px) scale(1);
+    z-index: 25; /* أعلى من الجواب بوضوح */
     pointer-events: auto;
 }
 
 .container.open .envelope-wrapper{
-    transform:translateY(160px);
+    transform:translateY(190px); /* نزلنا الجواب أكتر لتحت عشان يبعد تماماً عن الكارت والعداد */
     pointer-events: none;
-    opacity: 0.3;
+    opacity: 0.2;
 }
 
 /* نصوص منسقة بخطوط أميري وكايرو الفاخرة */
 .guest{
     color:#D4AF37;
-    font-size:15px;
+    font-size:14px;
     font-weight:700;
     letter-spacing: 0.5px;
 }
@@ -278,13 +279,13 @@ body{
 .title{
     font-family: 'Amiri', serif;
     color:#D4AF37;
-    font-size:22px;
+    font-size:18px;
     font-weight:700;
 }
 
 .inviter-name {
     font-family: 'Amiri', serif;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 1.4;
     color: #ffffff;
 }
@@ -293,29 +294,31 @@ body{
     color: #FCF6BA;
     font-weight: bold;
     display: block;
-    font-size: 22px;
-    margin-top: 4px;
+    font-size: 19px;
+    margin-top: 2px;
+    margin-bottom: 2px;
 }
 
 .names-box-royal {
-    background: rgba(212, 175, 55, 0.05);
+    background: rgba(212, 175, 55, 0.04);
     border-top: 1px dashed #D4AF37;
     border-bottom: 1px dashed #D4AF37;
-    padding: 10px 0;
-    margin: 5px 0;
+    padding: 8px 0;
+    margin: 2px 0;
 }
 
 .names{
-    font-size:24px;
+    font-size:25px;
     font-weight:900;
     text-shadow:2px 2px #000;
     color: #fff;
+    line-height: 1.2;
 }
 
 .badge-royal {
     background: linear-gradient(45deg, #BF953F, #FCF6BA, #B38728);
     color: #001124;
-    padding: 6px 20px;
+    padding: 5px 20px;
     border-radius: 50px;
     font-weight: 900;
     display: inline-block;
@@ -351,13 +354,13 @@ body{
 
 .btn-royal {
     display:inline-block;
-    padding:8px 20px;
-    background: transparent;
-    color:#FCF6BA;
+    padding:6px 20px;
+    background: white;
+    color:#001124;
     border: 1px solid #D4AF37;
     border-radius:50px;
     text-decoration:none;
-    font-weight:700;
+    font-weight:800;
     font-size: 13px;
     transition: 0.3s;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
@@ -373,6 +376,7 @@ body{
 
 <body>
 
+<!-- شاشة طلب الاسم أولاً -->
 <div class="name-overlay" id="nameOverlay">
     <div class="name-box">
         <h2>أهلاً بك في مناسبتنا السعيدة ✨</h2>
@@ -382,46 +386,55 @@ body{
     </div>
 </div>
 
+<!-- الجزيئات الذهبية -->
 <div class="gold-particles" id="particles"></div>
 
 <div class="container" id="container">
     <div class="card">
+        <!-- اسم الضيف المخصص -->
         <div id="guestName" class="guest"></div>
 
         <div class="title">
-            بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
+            ✨ نتشرف بحضوركم ومشاركتنا فرحتنا ✨
         </div>
 
+        <!-- صيغة الدعوة الرسمية مدمجة بالأسماء بالكامل وباسم الجد -->
         <div class="inviter-name">
             يتشرف الأستاذ /
             <span>الشحات أحمد إبراهيم النجار</span>
+            وبمشاركة الأستاذ / يسري فارس أبو الخير<br>
+            والأستاذ / محمد فارس أبو الخير ومحمد يسري أبو الخير<br>
             بدعوتكم لحضور حفل خطوبة حفيده
         </div>
 
+        <!-- أسماء العروسين داخل برواز مذهب فخم -->
         <div class="names-box-royal">
             <div class="names">
-                <div>المهندس / العريس</div>
-                <div style="font-size: 18px; color: #D4AF37; margin: 2px 0;">✨ و ✨</div>
-                <div>الدكتورة / العروسة</div>
+                <div>مهندس / فارس</div>
+                <div style="font-size: 20px; color: #D4AF37; margin: 2px 0;">&</div>
+                <div>دكتورة / وعد</div>
             </div>
         </div>
 
         <div style="font-size: 12px; color: #FCF6BA; letter-spacing: 0.5px;">
-            🕊️ نتشرف بحضوركم لمشاركتنا أجمل لحظات العمر الفرحة الكبرى
+            💍 ننتظر حضوركم لمشاركتنا أجمل لحظات العمر
         </div>
 
+        <!-- التاريخ المذهب المأخوذ من موقعك الأساسي -->
         <div class="badge-royal">
-            📅 07 / 07 / 2026
+            07 / 07 / 2026
         </div>
 
-        <div style="font-size: 14px; font-weight: 600; color: #fff;">
-            📍 مكان الحفل: اسم القاعة الفخمة هنا
+        <div style="font-size: 13px; font-weight: 600; color: #fff;">
+            📍 قاعة كمبنسك نيو جاردن - المنصورة
         </div>
 
-        <a class="btn-royal" href="https://maps.google.com" target="_blank">
-            📍 عرض موقع القاعة على الخريطة
+        <!-- زر الموقع الفعلي للقاعة -->
+        <a class="btn-royal" href="https://maps.app.goo.gl/UayPEAxyfAR1jFjv8" target="_blank">
+            📍 موقع القاعة
         </a>
 
+        <!-- العداد التنازلي المطور مع حماية كاملة ضد التداخل -->
         <div class="countdown-royal" id="timer">
             <div><span id="days">00</span>يوم</div>
             <div><span id="hours">00</span>ساعة</div>
@@ -430,6 +443,7 @@ body{
         </div>
     </div>
 
+    <!-- الظرف الملكي الأزرق -->
     <div class="envelope-wrapper" onclick="openInvite()">
         <div class="envelope-flap"></div>
         <div class="envelope-front"></div>
@@ -474,7 +488,7 @@ function openInvite(){
         colors: ['#BF953F', '#FCF6BA', '#B38728', '#ffffff', '#001f3f']
     });
 
-    // تشغيل الصوت التلقائي
+    // تشغيل الصوت التلقائي عند الضغط
     let audio = new Audio('زغاريد بدون موسيقى بصوت صافي عالي الجودة(M4A_128K).m4a');
     audio.play().catch(function(error) {
         console.log("التشغيل التلقائي مدعوم بعد تفاعل المستخدم.");
