@@ -6,9 +6,9 @@
 
 <title>دعوة خطوبة حفيد الأستاذ / الشحات أحمد إبراهيم النجار</title>
 
-<meta name="description" content="يتشرف الأستاذ / الشحات أحمد إبراهيم النجار بدعوتكم لحضور حفل خطوبة حفيده مهندس / فارس و دكتورة / وعد">
+<meta name="description" content="يتشرف الأستاذ / الشحات أحمد إبراهيم النجار بدعوة سيادتكم لحضور حفل خطوبة حفيده المهندس فارس والدكتورة وعد">
 <meta property="og:title" content="دعوة خطوبة ملكية ✨">
-<meta property="og:description" content="نتشرف بحضوركم ومشاركتنا فرحتنا الكبرى - قاعة كمبنسك نيو جاردن">
+<meta property="og:description" content="نتشرف بحضوركم ومشاركتنا فرحتنا الكبرى - قاعة كمبنسك نيو جاردن بطلخا">
 <meta property="og:type" content="website">
 
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -157,7 +157,7 @@ body{
 
 /* تصميم الظرف الأزرق الملكي الفاخر */
 .envelope-wrapper{
-    position:relative;
+    position:absolute;
     width:340px;
     height:230px;
     background:#001f3f;
@@ -221,20 +221,20 @@ body{
     100% { transform:translateX(-50%) scale(1); }
 }
 
-/* كارت الدعوة الملكي المطور والمنسق بدون تداخلات */
+/* كارت الدعوة الملكي المطور - تم تعديل الارتفاع والخطوط ليظهر كاملاً بضغطة واحدة وبدون سكرول */
 .card{
     position:absolute;
-    width:330px;
-    height:540px;
+    width:340px;
+    height:560px;
     background: radial-gradient(circle, #001f3f 0%, #001124 100%);
     border:3px solid #D4AF37;
     border-radius:24px;
-    padding:22px 16px;
+    padding:16px 14px;
     text-align:center;
     color:white;
     box-shadow:0 30px 70px rgba(0,0,0,.8), inset 0 0 40px rgba(212,175,55,0.15);
     z-index: 5;
-    transform:translateY(60px) scale(.8);
+    transform:translateY(60px) scale(.75);
     opacity:0;
     transition:.9s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     display:flex;
@@ -243,7 +243,7 @@ body{
     pointer-events: none;
 }
 
-/* حركة الفتح السحرية وضمان نزول الجواب بعيداً عن العداد */
+/* حركة الفتح السحرية المطورة لرفع الكارت لأعلى الشاشة لضمان الرؤية الكاملة تلقائياً */
 .container.open .envelope-flap{
     transform:rotateX(180deg);
     z-index: 4;
@@ -256,13 +256,13 @@ body{
 
 .container.open .card{
     opacity:1;
-    transform:translateY(-130px) scale(1);
+    transform:translateY(-155px) scale(1); /* تم رفع الكارت للأعلى أكثر ليظهر بالكامل */
     z-index: 25; 
     pointer-events: auto;
 }
 
 .container.open .envelope-wrapper{
-    transform:translateY(200px); 
+    transform:translateY(210px); /* تم إنزال الظرف للأسفل ليفسح مجالاً كاملاً للكارت */
     pointer-events: none;
     opacity: 0.15;
 }
@@ -275,6 +275,14 @@ body{
     letter-spacing: 0.5px;
 }
 
+.love-text {
+    font-family: 'Amiri', serif;
+    color: #FCF6BA;
+    font-size: 15px;
+    font-style: italic;
+    line-height: 1.3;
+}
+
 .title{
     font-family: 'Amiri', serif;
     color:#D4AF37;
@@ -285,7 +293,7 @@ body{
 .inviter-name {
     font-family: 'Amiri', serif;
     font-size: 18px;
-    line-height: 1.5;
+    line-height: 1.4;
     color: #ffffff;
 }
 
@@ -293,21 +301,21 @@ body{
     color: #FCF6BA;
     font-weight: bold;
     display: block;
-    font-size: 23px;
-    margin-top: 4px;
-    margin-bottom: 4px;
+    font-size: 22px;
+    margin-top: 2px;
+    margin-bottom: 2px;
 }
 
 .names-box-royal {
     background: rgba(212, 175, 55, 0.04);
     border-top: 1px dashed #D4AF37;
     border-bottom: 1px dashed #D4AF37;
-    padding: 12px 0;
-    margin: 4px 0;
+    padding: 8px 0;
+    margin: 2px 0;
 }
 
 .names{
-    font-size:26px;
+    font-size: 21px;
     font-weight:900;
     text-shadow:2px 2px #000;
     color: #fff;
@@ -317,7 +325,7 @@ body{
 .badge-royal {
     background: linear-gradient(45deg, #BF953F, #FCF6BA, #B38728);
     color: #001124;
-    padding: 6px 22px;
+    padding: 5px 22px;
     border-radius: 50px;
     font-weight: 900;
     display: inline-block;
@@ -353,7 +361,7 @@ body{
 
 .btn-royal {
     display:inline-block;
-    padding:8px 24px;
+    padding:6px 24px;
     background: white;
     color:#001124;
     border: 1px solid #D4AF37;
@@ -375,7 +383,6 @@ body{
 
 <body>
 
-<!-- شاشة طلب الاسم أولاً -->
 <div class="name-overlay" id="nameOverlay">
     <div class="name-box">
         <h2>أهلاً بك في مناسبتنا السعيدة ✨</h2>
@@ -385,53 +392,47 @@ body{
     </div>
 </div>
 
-<!-- الجزيئات الذهبية -->
 <div class="gold-particles" id="particles"></div>
 
 <div class="container" id="container">
     <div class="card">
-        <!-- اسم الضيف المخصص -->
         <div id="guestName" class="guest"></div>
 
-        <div class="title">
-            ✨ نتشرف بحضوركم ومشاركتنا فرحتنا ✨
+        <div class="love-text">
+            "وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً"
         </div>
 
-        <!-- صيغة الدعوة الكلاسيكية الفخمة باسم الأستاذ الشحات فقط -->
         <div class="inviter-name">
             يتشرف الأستاذ /
             <span>الشحات أحمد إبراهيم النجار</span>
-            بدعوتكم لحضور حفل خطوبة حفيده
+            بدعوة سيادتكم لحضور حفل خطوبة حفيده
         </div>
 
-        <!-- أسماء العروسين داخل برواز مذهب فخم -->
         <div class="names-box-royal">
             <div class="names">
-                <div>مهندس / فارس</div>
-                <div style="font-size: 20px; color: #D4AF37; margin: 2px 0;">&</div>
-                <div>دكتورة / وعد</div>
+                <div>المهندس / فارس يسري أبو الخير</div>
+                <div style="font-size: 16px; color: #D4AF37; margin: 1px 0;">✨ و ✨</div>
+                <div>الدكتورة / وعد محمد صقر</div>
             </div>
         </div>
 
         <div style="font-size: 12px; color: #FCF6BA; letter-spacing: 0.5px;">
-            💍 ننتظر حضوركم لمشاركتنا أجمل لحظات العمر
+            🕊️ نتشرف بحضوركم لمشاركتنا فرحتنا الكبرى وأجمل لحظات العمر
         </div>
 
-        <!-- التاريخ المذهب -->
         <div class="badge-royal">
             07 / 07 / 2026
         </div>
 
-        <div style="font-size: 13px; font-weight: 600; color: #fff;">
-            📍 قاعة كمبنسك نيو جاردن - المنصورة
+        <div style="font-size: 13px; font-weight: 600; color: #fff; line-height: 1.4;">
+            📍 قاعة كمبنسك نيو جاردن - طلخا <br>
+            ⏳ موعد حضور القاعة: الساعة ٩ مساءً
         </div>
 
-        <!-- زر الموقع الفعلي للقاعة -->
         <a class="btn-royal" href="https://maps.app.goo.gl/UayPEAxyfAR1jFjv8" target="_blank">
-            📍 موقع القاعة
+            📍 موقع القاعة على الخريطة
         </a>
 
-        <!-- العداد التنازلي المطور مع حماية كاملة ضد التداخل وضبط التوقيت العالمي -->
         <div class="countdown-royal" id="timer">
             <div><span id="days">00</span>يوم</div>
             <div><span id="hours">00</span>ساعة</div>
@@ -440,7 +441,6 @@ body{
         </div>
     </div>
 
-    <!-- الظرف الملكي الأزرق -->
     <div class="envelope-wrapper" onclick="openInvite()">
         <div class="envelope-flap"></div>
         <div class="envelope-front"></div>
@@ -494,8 +494,7 @@ function openInvite(){
 
 // العداد التنازلي الموحد عالمياً لمنع اختلاف الساعات بين الأجهزة
 function countdown(){
-    // تحديد موعد الفرح بتوقيت مصر العالمي الصارم (UTC+3) منعا للخبطة الأجهزة
-    let target = new Date("2026-07-07T00:00:00+03:00").getTime();
+    let target = new Date("2026-07-07T21:00:00+03:00").getTime(); // تم ضبطها على الساعة 9 مساءً بتوقيت مصر
     let now = new Date().getTime();
     let diff = target - now;
 
