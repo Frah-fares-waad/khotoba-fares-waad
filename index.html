@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ا<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
@@ -172,27 +172,30 @@ body{
     z-index: 11;
 }
 
+/* زر القلب الأحمر الكبير والنابض */
 .seal-btn{
     position:absolute;
-    top:90px;
+    top:85px;
     left:50%;
     transform:translateX(-50%);
-    width:60px;
-    height:60px;
+    width:65px;
+    height:65px;
     border-radius:50%;
-    background: linear-gradient(45deg, #BF953F, #FCF6BA, #B38728);
+    background: #ffffff;
     display:flex;
     justify-content:center;
     align-items:center;
-    font-size:24px;
+    font-size:32px;
     z-index:13;
-    animation:pulseSeal 1.5s infinite;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    animation:pulseHeart 1.2s infinite;
+    box-shadow: 0 4px 20px rgba(255, 0, 0, 0.4);
+    cursor: pointer;
+    border: 2px solid #D4AF37;
 }
 
-@keyframes pulseSeal{
+@keyframes pulseHeart{
     0% { transform:translateX(-50%) scale(1); }
-    50% { transform:translateX(-50%) scale(1.06); }
+    50% { transform:translateX(-50%) scale(1.12); }
     100% { transform:translateX(-50%) scale(1); }
 }
 
@@ -220,7 +223,7 @@ body{
     display: none;
 }
 
-/* حركة الففتح */
+/* حركة الفتح */
 .container.open .envelope-flap{
     transform:rotateX(180deg);
     z-index: 3;
@@ -252,14 +255,13 @@ body{
 }
 
 .inviter-name {
-    font-family: 'Cairo', sans-serif; /* تم التغيير لكايرو ليطابق تنسيق أسماء العرسان */
+    font-family: 'Cairo', sans-serif;
     font-size: 16px;
     line-height: 1.5;
     color: #ffffff;
     margin-bottom: 10px;
 }
 
-/* تعديل الستاين الخاص باسم صاحب الدعوة ليكون دهبي فاقع وتخين جداً */
 .inviter-name span {
     background: linear-gradient(45deg, #FFE259, #FFA751, #FFD700);
     -webkit-background-clip: text;
@@ -365,14 +367,15 @@ body{
 
         <div class="inviter-name">
             يتشرف الأستاذ /
-            <span>الشحات أحمد النجار</span>
+            <span>الشحات أحمد إبراهيم النجار</span>
             بدعوة سيادتكم لحضور حفل خطوبة حفيده
         </div>
 
         <div class="names-box-royal">
             <div class="names">
                 <div>المهندس / فارس يسري أبو الخير</div>
-                <div style="font-size: 14px; color: #D4AF37; margin: 2px 0;">✨ و ✨</div>
+                <!-- تم تبديل حرف الواو بعلامة الـ & الذهبية والمودرن -->
+                <div style="font-size: 22px; color: #FFD700; font-weight:900; margin: 4px 0;">✨ & ✨</div>
                 <div>الدكتورة / وعد محمد صقر</div>
             </div>
         </div>
@@ -405,7 +408,8 @@ body{
     <div class="envelope-wrapper" onclick="openInvite()">
         <div class="envelope-flap"></div>
         <div class="envelope-front"></div>
-        <div class="seal-btn">⚜️</div>
+        <!-- تم وضع القلب الأحمر النابض هنا بدلاً من الختم الذهبي القديم -->
+        <div class="seal-btn">❤️</div>
     </div>
 </div>
 
