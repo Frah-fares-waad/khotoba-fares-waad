@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 <title>دعوة خطوبة حفيد الأستاذ / الشحات أحمد إبراهيم النجار</title>
 
@@ -24,6 +24,7 @@
 body{
     font-family: 'Cairo', sans-serif;
     height:100vh;
+    height: -webkit-fill-available;
     overflow:hidden;
     background: radial-gradient(circle, #001f3f, #001124, #000711);
     display:flex;
@@ -32,92 +33,67 @@ body{
     position:relative;
 }
 
-/* شاشة زجاجية ملكية لإدخال الاسم */
+/* شاشة إدخال الاسم */
 .name-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 11, 36, 0.9);
+    background: rgba(0, 11, 36, 0.95);
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 100;
-    transition: opacity 0.8s ease, visibility 0.8s ease;
+    transition: opacity 0.6s ease, visibility 0.6s ease;
     backdrop-filter: blur(10px);
 }
 
 .name-box {
     background: rgba(255, 255, 255, 0.03);
     border: 2px solid #D4AF37;
-    padding: 40px 30px;
-    border-radius: 30px;
+    padding: 35px 25px;
+    border-radius: 25px;
     text-align: center;
     color: white;
-    max-width: 380px;
+    max-width: 360px;
     width: 90%;
-    box-shadow: 0 0 30px rgba(212, 175, 55, 0.2), inset 0 0 20px rgba(215, 175, 55, 0.05);
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.2);
 }
 
 .name-box h2 {
     font-family: 'Amiri', serif;
     color: #D4AF37;
-    font-size: 26px;
-    font-weight: 700;
+    font-size: 24px;
     margin-bottom: 12px;
-}
-
-.name-box p {
-    font-size: 14px;
-    margin-bottom: 30px;
-    opacity: 0.8;
 }
 
 .name-box input {
     width: 100%;
-    padding: 14px 20px;
+    padding: 12px 20px;
     border-radius: 50px;
     border: 1px solid #D4AF37;
-    background: rgba(255, 255, 255, 0.95);
+    background: white;
     color: #001124;
     text-align: center;
-    font-family: 'Cairo', sans-serif;
     font-size: 16px;
     font-weight: 600;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     outline: none;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 
 .name-box button {
-    background: linear-gradient(45deg, #BF953F, #FCF6BA, #B38728, #FBF5B7);
-    background-size: 300% 300%;
-    animation: goldAnimation 4s ease infinite;
+    background: linear-gradient(45deg, #BF953F, #FCF6BA, #B38728);
     color: #001124;
     border: none;
-    padding: 12px 35px;
+    padding: 12px 30px;
     border-radius: 50px;
     font-weight: 900;
     cursor: pointer;
-    font-family: 'Cairo', sans-serif;
     font-size: 15px;
-    transition: 0.4s ease;
-    box-shadow: 0 4px 20px rgba(212, 175, 55, 0.4);
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
 }
 
-.name-box button:hover {
-    transform: scale(1.05) translateY(-2px);
-    box-shadow: 0 6px 25px rgba(212, 175, 55, 0.6);
-}
-
-@keyframes goldAnimation {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-/* جزيئات الذهب الطائرة */
 .gold-particles{
     position:absolute;
     width:100%;
@@ -130,43 +106,43 @@ body{
 .gold-particles span{
     position:absolute;
     display:block;
-    width:5px;
-    height:5px;
+    width:4px;
+    height:4px;
     background: linear-gradient(#BF953F, #FCF6BA);
     border-radius:50%;
-    animation:floatParticles 12s linear infinite;
-    opacity:.6;
+    animation:floatParticles 10s linear infinite;
+    opacity:.5;
 }
 
 @keyframes floatParticles{
-    0%{ transform:translateY(100vh) translateX(0) scale(0); opacity: 0; }
-    50%{ opacity: 0.8; }
-    100%{ transform:translateY(-100px) translateX(50px) scale(1.2); opacity: 0; }
+    0%{ transform:translateY(100vh) scale(0); opacity: 0; }
+    50%{ opacity: 0.7; }
+    100%{ transform:translateY(-50px) scale(1); opacity: 0; }
 }
 
 .container{
     position:relative;
     width:100%;
-    max-width:420px;
-    height: 100vh;
+    max-width:380px;
+    height: 90vh;
     display:flex;
     justify-content:center;
     align-items:center;
     z-index: 2;
 }
 
-/* تصميم الظرف الأزرق الملكي الفاخر */
+/* الظرف الفخم */
 .envelope-wrapper{
     position:absolute;
-    width:340px;
-    height:230px;
+    width:330px;
+    height:220px;
     background:#001f3f;
     cursor:pointer;
-    border-radius:0 0 16px 16px;
-    box-shadow:0 25px 60px rgba(0,0,0,.7);
-    transition:.7s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius:0 0 12px 12px;
+    box-shadow:0 20px 50px rgba(0,0,0,.6);
+    transition: transform .8s cubic-bezier(0.4, 0, 0.2, 1), opacity .5s ease;
     z-index: 10;
-    border: 1px solid rgba(212, 175, 55, 0.3);
+    border: 1px solid rgba(212, 175, 55, 0.2);
 }
 
 .envelope-flap{
@@ -175,11 +151,11 @@ body{
     left:0;
     width:0;
     height:0;
-    border-left:170px solid transparent;
-    border-right:170px solid transparent;
-    border-top:135px solid #00152b;
+    border-left:165px solid transparent;
+    border-right:165px solid transparent;
+    border-top:125px solid #00152b;
     transform-origin:top;
-    transition:.7s;
+    transition:.6s;
     z-index:12;
 }
 
@@ -188,106 +164,95 @@ body{
     bottom:0;
     width:0;
     height:0;
-    border-left:170px solid #002d5c;
-    border-right:170px solid #002d5c;
-    border-bottom:115px solid #001a36;
-    border-top:115px solid transparent;
+    border-left:165px solid #002d5c;
+    border-right:165px solid #002d5c;
+    border-bottom:110px solid #001a36;
+    border-top:110px solid transparent;
     z-index: 11;
 }
 
-/* ختم شمعي ملكي ذهبي */
 .seal-btn{
     position:absolute;
-    top:95px;
+    top:90px;
     left:50%;
     transform:translateX(-50%);
-    width:65px;
-    height:65px;
+    width:60px;
+    height:60px;
     border-radius:50%;
     background: linear-gradient(45deg, #BF953F, #FCF6BA, #B38728);
     display:flex;
     justify-content:center;
     align-items:center;
-    font-size:28px;
+    font-size:24px;
     z-index:13;
     animation:pulseSeal 1.5s infinite;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.4), 0 0 10px rgba(212, 175, 55, 0.5);
-    transition: opacity 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
 }
 
 @keyframes pulseSeal{
     0% { transform:translateX(-50%) scale(1); }
-    50% { transform:translateX(-50%) scale(1.08); box-shadow: 0 4px 25px rgba(212, 175, 55, 0.8); }
+    50% { transform:translateX(-50%) scale(1.06); }
     100% { transform:translateX(-50%) scale(1); }
 }
 
-/* كارت الدعوة الملكي المطور - تم تعديل الارتفاع والخطوط ليظهر كاملاً بضغطة واحدة وبدون سكرول */
+/* كارت الدعوة المرن والذكي لتفادي القص والتداخل */
 .card{
     position:absolute;
-    width:340px;
-    height:560px;
+    width:92%;
+    max-height:95%; /* يمنع الخروج التام عن الشاشة */
     background: radial-gradient(circle, #001f3f 0%, #001124 100%);
     border:3px solid #D4AF37;
-    border-radius:24px;
-    padding:16px 14px;
+    border-radius:20px;
+    padding:20px 15px;
     text-align:center;
     color:white;
-    box-shadow:0 30px 70px rgba(0,0,0,.8), inset 0 0 40px rgba(212,175,55,0.15);
+    box-shadow:0 20px 50px rgba(0,0,0,.8), inset 0 0 30px rgba(212,175,55,0.15);
     z-index: 5;
-    transform:translateY(60px) scale(.75);
+    transform: scale(.6);
     opacity:0;
-    transition:.9s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    display:flex;
-    flex-direction:column;
-    justify-content:space-between;
-    pointer-events: none;
+    transition:.8s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+    
+    /* حل السكرول الذكي لو الشاشة صغيرة */
+    overflow-y: auto;
+    scrollbar-width: none; /* لإخفاء شريط السكرول في فايرفوكس */
 }
 
-/* حركة الفتح السحرية المطورة لرفع الكارت لأعلى الشاشة لضمان الرؤية الكاملة تلقائياً */
+.card::-webkit-scrollbar {
+    display: none; /* لإخفاء شريط السكرول في جوجل كروم وسفاري */
+}
+
+/* حركة الفتح وحل الاختفاء الكامل للظرف لتوسيع المساحة */
 .container.open .envelope-flap{
     transform:rotateX(180deg);
-    z-index: 4;
-}
-
-.container.open .seal-btn{
-    opacity:0;
-    pointer-events:none;
 }
 
 .container.open .card{
     opacity:1;
-    transform:translateY(-155px) scale(1); /* تم رفع الكارت للأعلى أكثر ليظهر بالكامل */
+    transform: scale(1); /* يظهر في منتصف الشاشة بالظبط ويكون متناسق */
     z-index: 25; 
     pointer-events: auto;
 }
 
 .container.open .envelope-wrapper{
-    transform:translateY(210px); /* تم إنزال الظرف للأسفل ليفسح مجالاً كاملاً للكارت */
+    transform: translateY(300px) scale(0.5); /* ينزل لتحت ويصغر لكي لا يزاحم الكارت */
+    opacity: 0; /* يختفي تماماً ليعطي فخامة كاملة للكارت */
     pointer-events: none;
-    opacity: 0.15;
 }
 
-/* نصوص منسقة بخطوط أميري وكايرو الفاخرة */
+/* تنسيق النصوص الفخمة */
 .guest{
     color:#D4AF37;
     font-size:14px;
     font-weight:700;
-    letter-spacing: 0.5px;
+    margin-bottom: 5px;
 }
 
 .love-text {
     font-family: 'Amiri', serif;
     color: #FCF6BA;
-    font-size: 15px;
-    font-style: italic;
-    line-height: 1.3;
-}
-
-.title{
-    font-family: 'Amiri', serif;
-    color:#D4AF37;
-    font-size:18px;
-    font-weight:700;
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 10px;
 }
 
 .inviter-name {
@@ -295,6 +260,7 @@ body{
     font-size: 18px;
     line-height: 1.4;
     color: #ffffff;
+    margin-bottom: 10px;
 }
 
 .inviter-name span {
@@ -302,66 +268,46 @@ body{
     font-weight: bold;
     display: block;
     font-size: 22px;
-    margin-top: 2px;
-    margin-bottom: 2px;
+    margin: 3px 0;
 }
 
 .names-box-royal {
     background: rgba(212, 175, 55, 0.04);
     border-top: 1px dashed #D4AF37;
     border-bottom: 1px dashed #D4AF37;
-    padding: 8px 0;
-    margin: 2px 0;
+    padding: 10px 0;
+    margin: 10px 0;
 }
 
 .names{
-    font-size: 21px;
+    font-size: 19px;
     font-weight:900;
-    text-shadow:2px 2px #000;
     color: #fff;
-    line-height: 1.3;
+    line-height: 1.4;
 }
 
 .badge-royal {
     background: linear-gradient(45deg, #BF953F, #FCF6BA, #B38728);
     color: #001124;
-    padding: 5px 22px;
+    padding: 5px 20px;
     border-radius: 50px;
     font-weight: 900;
     display: inline-block;
-    margin: 0 auto;
+    margin: 10px auto;
     font-size: 13px;
-    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
 }
 
-.countdown-royal {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(212, 175, 55, 0.3);
-    color: #fff;
-    border-radius: 14px;
-    padding: 8px;
-    display:flex;
-    justify-content:space-between;
-}
-
-.countdown-royal div{
-    flex:1;
-    font-size:11px;
-    text-align: center;
-    color: #FCF6BA;
-}
-
-.countdown-royal span{
-    display:block;
-    font-size:22px;
-    font-weight:900;
-    font-family: sans-serif;
-    color: #ffffff;
+.info-text {
+    font-size: 13px; 
+    font-weight: 600; 
+    color: #fff; 
+    line-height: 1.5;
+    margin: 8px 0;
 }
 
 .btn-royal {
     display:inline-block;
-    padding:6px 24px;
+    padding:8px 24px;
     background: white;
     color:#001124;
     border: 1px solid #D4AF37;
@@ -369,14 +315,33 @@ body{
     text-decoration:none;
     font-weight:800;
     font-size: 13px;
-    transition: 0.3s;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    margin-bottom: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-.btn-royal:hover {
-    background: linear-gradient(45deg, #BF953F, #FCF6BA);
-    color: #001124;
-    transform: translateY(-1px);
+.countdown-royal {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    color: #fff;
+    border-radius: 12px;
+    padding: 6px;
+    display:flex;
+    justify-content:space-between;
+    margin-top: 5px;
+}
+
+.countdown-royal div{
+    flex:1;
+    font-size:10px;
+    color: #FCF6BA;
+}
+
+.countdown-royal span{
+    display:block;
+    font-size:18px;
+    font-weight:900;
+    font-family: sans-serif;
+    color: #ffffff;
 }
 </style>
 </head>
@@ -399,7 +364,7 @@ body{
         <div id="guestName" class="guest"></div>
 
         <div class="love-text">
-            "وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً"
+            "وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا Lِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً"
         </div>
 
         <div class="inviter-name">
@@ -411,12 +376,12 @@ body{
         <div class="names-box-royal">
             <div class="names">
                 <div>المهندس / فارس يسري أبو الخير</div>
-                <div style="font-size: 16px; color: #D4AF37; margin: 1px 0;">✨ و ✨</div>
+                <div style="font-size: 14px; color: #D4AF37; margin: 2px 0;">✨ و ✨</div>
                 <div>الدكتورة / وعد محمد صقر</div>
             </div>
         </div>
 
-        <div style="font-size: 12px; color: #FCF6BA; letter-spacing: 0.5px;">
+        <div style="font-size: 12px; color: #FCF6BA;">
             🕊️ نتشرف بحضوركم لمشاركتنا فرحتنا الكبرى وأجمل لحظات العمر
         </div>
 
@@ -424,7 +389,7 @@ body{
             07 / 07 / 2026
         </div>
 
-        <div style="font-size: 13px; font-weight: 600; color: #fff; line-height: 1.4;">
+        <div class="info-text">
             📍 قاعة كمبنسك نيو جاردن - طلخا <br>
             ⏳ موعد حضور القاعة: الساعة ٩ مساءً
         </div>
@@ -449,18 +414,15 @@ body{
 </div>
 
 <script>
-// توليد الجزيئات الذهبية بشكل احترافي
-for(let i=0; i<50; i++){
+for(let i=0; i<40; i++){
     let star = document.createElement("span");
     star.style.left = Math.random()*100+"%";
     star.style.bottom = "0px";
-    star.style.animationDuration = (6+Math.random()*7)+"s";
-    star.style.animationDelay = (Math.random()*5)+"s";
-    star.style.opacity = Math.random();
+    star.style.animationDuration = (5+Math.random()*6)+"s";
+    star.style.animationDelay = (Math.random()*4)+"s";
     document.getElementById("particles").appendChild(star);
 }
 
-// دالة تأكيد الاسم
 function submitName() {
     let name = document.getElementById("nameInput").value.trim();
     if(name === "") {
@@ -468,38 +430,31 @@ function submitName() {
         return;
     }
     document.getElementById("guestName").innerHTML = `👑 أهلاً وسهلاً بـ ${name} 👑`;
-    
-    let overlay = document.getElementById("nameOverlay");
-    overlay.style.opacity = "0";
-    overlay.style.visibility = "hidden";
+    document.getElementById("nameOverlay").style.opacity = "0";
+    document.getElementById("nameOverlay").style.visibility = "hidden";
 }
 
-// دالة فتح الظرف مع الكانفيتي والزغاريد
 function openInvite(){
     document.getElementById("container").classList.add("open");
     
     confetti({
-        particleCount: 200,
-        spread: 100,
+        particleCount: 150,
+        spread: 80,
         origin: {y: .6},
-        colors: ['#BF953F', '#FCF6BA', '#B38728', '#ffffff', '#001f3f']
+        colors: ['#BF953F', '#FCF6BA', '#B38728', '#ffffff']
     });
 
-    // تشغيل الصوت التلقائي عند الضغط
     let audio = new Audio('زغاريد بدون موسيقى بصوت صافي عالي الجودة(M4A_128K).m4a');
-    audio.play().catch(function(error) {
-        console.log("التشغيل التلقائي مدعوم بعد تفاعل المستخدم.");
-    });
+    audio.play().catch(function(e) { console.log("Audio play deferred"); });
 }
 
-// العداد التنازلي الموحد عالمياً لمنع اختلاف الساعات بين الأجهزة
 function countdown(){
-    let target = new Date("2026-07-07T21:00:00+03:00").getTime(); // تم ضبطها على الساعة 9 مساءً بتوقيت مصر
+    let target = new Date("2026-07-07T21:00:00+03:00").getTime(); 
     let now = new Date().getTime();
     let diff = target - now;
 
     if(diff < 0){
-        document.getElementById("timer").innerHTML = "<div style='width:100%;font-weight:900;text-align:center;color:#FCF6BA;'>🎉 تمت الخطوبة على خير وببركة الله 🎉</div>";
+        document.getElementById("timer").innerHTML = "<div style='width:100%;font-weight:900;text-align:center;color:#FCF6BA;'>🎉 تمت الخطوبة على خير 🎉</div>";
         return;
     }
 
